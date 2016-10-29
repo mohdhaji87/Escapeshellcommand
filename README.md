@@ -9,3 +9,7 @@ Attacker's can terminate the command using ; or | (pipe) [in linux ] and && [in 
 In php we can either disable the system call in php.ini configuration file , 
 or if developers needs it then he can filter user input before passing argument to shell .
 There is command call escapeshellcmd() in php which doesn't allow arbitary shell commands to get executed ..
+
+When you enter google.com as url it fetches "whois google.com" .
+suppose if attacker enters as google.com;ls -la  or google.com | ls-la 
+then command won't get executed because of escapeshellcmd() php command
